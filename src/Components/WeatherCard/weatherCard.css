@@ -1,0 +1,37 @@
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+#inputField {
+	padding: 10px;
+	margin: 1rem;
+	width: 15rem;
+	margin-inline: auto;
+	background-color: rgb(220, 163, 172);
+	color: black;
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 2rem;
+}
+#inputField:hover {
+	border: 2px solid rgb(255, 128, 149);
+	padding: 8px;
+}
+
+#submitSearch {
+	padding: 10px;
+	width: 7rem;
+	margin-bottom: 1rem;
+	margin-inline: auto;
+	background-color: black;
+	color: pink;
+	font-size: 1.2rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 2rem;
+}
+#submitSearch:hover {
+	border: 2px solid rgb(255, 128, 149);
+	padding: 8px;
+}

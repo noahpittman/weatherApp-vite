@@ -35,3 +35,15 @@
 	border: 2px solid rgb(255, 128, 149);
 	padding: 8px;
 }
+
+#forecastContainer {
+	margin: 2rem;
+	display: flex;
+	gap: 2rem;
+	margin-inline: auto;
+	justify-content: center;
+}
+
+.forecastCard {
+	min-width: 8rem;
+}

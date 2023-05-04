@@ -1,10 +1,10 @@
 import "./App.css";
-import WeatherCard from "./Components/WeatherCard/WeatherCard";
+import Weather from "./Components/WeatherCard/Weather";
 
 function App() {
 	return (
 		<>
-			<WeatherCard />
+			<Weather />
 		</>
 	);
 }

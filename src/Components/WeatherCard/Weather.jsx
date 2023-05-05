@@ -107,6 +107,8 @@ const Weather = () => {
 
 	return (
 		<div id="headerContainer">
+			<img src="/hellokitty1.png" alt="hello kitty" id="helloKitty1" />
+			<img src="/hellokitty2.png" alt="hello kitty" id="helloKitty2" />
 			<h1>Enter a city</h1>
 			<h2>or use your ZIP/Postal Code</h2>
 			<div className="inputContainer">

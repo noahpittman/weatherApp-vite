@@ -58,14 +58,12 @@ const Weather = () => {
 				Math.round(forecast.forecast.forecastday[2].day.avgtemp_c)
 			);
 
-			setForecastDate3(forecast.forecast.forecastday[3].date);
-			const forecastCondition3 = forecast.forecast.forecastday[3].day.condition;
-			setForecastImg3(forecastCondition3.icon);
-			setForecastTemp3(
-				Math.round(forecast.forecast.forecastday[3].day.avgtemp_c)
-			);
-
-			console.log(forecastDate1);
+			// setForecastDate3(forecast.forecast.forecastday[3].date);
+			// const forecastCondition3 = forecast.forecast.forecastday[3].day.condition;
+			// setForecastImg3(forecastCondition3.icon);
+			// setForecastTemp3(
+			// 	Math.round(forecast.forecast.forecastday[3].day.avgtemp_c)
+			// );
 		}
 	}, [locale]);
 
@@ -77,7 +75,7 @@ const Weather = () => {
 			`http://api.weatherapi.com/v1/current.json?key=78a3782df11840c5952223430230105&q=${localeInput}&aqi=no`
 		);
 		const response2 = await fetch(
-			`http://api.weatherapi.com/v1/forecast.json?key=78a3782df11840c5952223430230105&q=${localeInput}&days=4&aqi=no&alerts=yes`
+			`http://api.weatherapi.com/v1/forecast.json?key=78a3782df11840c5952223430230105&q=${localeInput}&days=5&aqi=no&alerts=yes`
 		);
 		if (response.ok) {
 			localeJSON = await response.json();
@@ -143,22 +141,23 @@ const Weather = () => {
 			<h3 id="hiTemp">{localeFeelsLike ? localeFeelsLike : ""}</h3>
 			<h3 id="localeWind">{localeWind ? localeWind : ""}</h3>
 
+			<br />
+			<div className="forecastCard">
+				<h3>{forecast ? "Tomorrow" : ""}</h3>
+				<img src={forecast ? forecastImg1 : ""} alt="" />
+				<h3>{forecast ? forecastTemp1 + "ºC" : ""}</h3>
+			</div>
 			<div id="forecastContainer">
-				<div className="forecastCard">
-					<h3>{forecast ? "Tomorrow" : ""}</h3>
-					<img src={forecast ? forecastImg1 : ""} alt="" />
-					<h3>{forecast ? forecastTemp1 + "ºC" : ""}</h3>
-				</div>
-				<div className="forecastCard">
+				{/* <div className="forecastCard">
 					<h3>{forecast ? forecastDate2 : ""}</h3>
 					<img src={forecast ? forecastImg2 : ""} alt="" />
 					<h3>{forecast ? forecastTemp2 + "ºC" : ""}</h3>
-				</div>
-				<div className="forecastCard">
+				</div> */}
+				{/* <div className="forecastCard">
 					<h3>{forecast ? forecastDate3 : ""}</h3>
 					<img src={forecast ? forecastImg3 : ""} alt="" />
 					<h3>{forecast ? forecastTemp3 + "ºC" : ""}</h3>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
